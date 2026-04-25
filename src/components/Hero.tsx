@@ -1,19 +1,11 @@
-import heroImage from "@/assets/hero-interior.jpg";
 import { Star } from "lucide-react";
 
 const Hero = () => {
   return (
     <section
       id="top"
-      className="relative min-h-screen flex items-end overflow-hidden"
+      className="relative min-h-screen flex items-end overflow-hidden bg-ink arabesque-bg"
     >
-      <img
-        src={heroImage}
-        alt="Traditional Omani majlis interior at Arab World Restaurant Fanja"
-        className="absolute inset-0 h-full w-full object-cover animate-slow-zoom"
-        width={1920}
-        height={1080}
-      />
       <div className="absolute inset-0 bg-gradient-hero" />
 
       <div className="relative container pb-20 md:pb-32 pt-32">

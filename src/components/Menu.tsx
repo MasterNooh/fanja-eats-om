@@ -1,6 +1,3 @@
-import shuwa from "@/assets/dish-shuwa.jpg";
-import grill from "@/assets/dish-grill.jpg";
-import majboos from "@/assets/dish-majboos.jpg";
 import Ornament from "./Ornament";
 
 type Item = {
@@ -14,7 +11,6 @@ type Item = {
 type Section = {
   title: string;
   arabic: string;
-  image: string;
   items: Item[];
 };
 
@@ -22,7 +18,6 @@ const sections: Section[] = [
   {
     title: "Signature Shuwa",
     arabic: "الشواء",
-    image: shuwa,
     items: [
       {
         name: "Fresh Lamb Shuwa",
@@ -49,7 +44,6 @@ const sections: Section[] = [
   {
     title: "From the Grill",
     arabic: "المشاوي",
-    image: grill,
     items: [
       {
         name: "Mixed Grill Platter",
@@ -74,7 +68,6 @@ const sections: Section[] = [
   {
     title: "Rice & Tradition",
     arabic: "الأرز والتقاليد",
-    image: majboos,
     items: [
       {
         name: "Camel Majboos",
@@ -116,69 +109,52 @@ const Menu = () => {
           </p>
         </div>
 
-        <div className="mt-20 space-y-24 md:space-y-32">
-          {sections.map((section, idx) => (
+        <div className="mt-20 grid md:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-12">
+          {sections.map((section) => (
             <div
               key={section.title}
-              className={`grid lg:grid-cols-12 gap-10 lg:gap-16 items-center ${
-                idx % 2 === 1 ? "lg:[direction:rtl]" : ""
-              }`}
+              className="bg-sand/40 border border-brass/30 p-8 md:p-10 shadow-warm"
             >
-              <div className="lg:col-span-5 [direction:ltr]">
-                <div className="aspect-square overflow-hidden shadow-warm">
-                  <img
-                    src={section.image}
-                    alt={section.title}
-                    className="h-full w-full object-cover hover:scale-105 transition-transform duration-700"
-                    loading="lazy"
-                    width={1024}
-                    height={1024}
-                  />
-                </div>
+              <div className="flex items-baseline gap-3 flex-wrap">
+                <h3 className="font-display text-2xl md:text-3xl text-ink">
+                  {section.title}
+                </h3>
+                <span className="font-arabic text-xl text-spice">
+                  {section.arabic}
+                </span>
               </div>
+              <div className="ornament-divider mt-5 mb-7" />
 
-              <div className="lg:col-span-7 [direction:ltr]">
-                <div className="flex items-baseline gap-4">
-                  <h3 className="font-display text-3xl md:text-4xl text-ink">
-                    {section.title}
-                  </h3>
-                  <span className="font-arabic text-2xl text-spice">
-                    {section.arabic}
-                  </span>
-                </div>
-                <div className="ornament-divider mt-6 mb-8 max-w-xs" />
-
-                <ul className="space-y-7">
-                  {section.items.map((item) => (
-                    <li
-                      key={item.name}
-                      className="grid grid-cols-[1fr_auto] gap-6 items-baseline"
-                    >
-                      <div>
-                        <div className="flex items-center gap-3 flex-wrap">
-                          <h4 className="font-display text-xl md:text-2xl text-ink">
-                            {item.name}
-                          </h4>
-                          {item.signature && (
-                            <span className="text-[10px] uppercase tracking-[0.2em] bg-burgundy text-sand px-2 py-0.5">
-                              Signature
-                            </span>
-                          )}
-                          <span className="font-arabic text-base text-muted-foreground">
-                            {item.arabic}
+              <ul className="space-y-6">
+                {section.items.map((item) => (
+                  <li
+                    key={item.name}
+                    className="grid grid-cols-[1fr_auto] gap-4 items-baseline"
+                  >
+                    <div>
+                      <div className="flex items-center gap-2 flex-wrap">
+                        <h4 className="font-display text-lg md:text-xl text-ink">
+                          {item.name}
+                        </h4>
+                        {item.signature && (
+                          <span className="text-[10px] uppercase tracking-[0.2em] bg-burgundy text-sand px-2 py-0.5">
+                            Signature
                           </span>
-                        </div>
-                        <p className="mt-1.5 text-foreground/70 text-[15px] leading-relaxed">
-                          {item.desc}
-                        </p>
+                        )}
                       </div>
-                      <div className="font-display text-2xl text-spice tabular-nums">
-                        {item.price}
-                      </div>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+                      <span className="font-arabic text-sm text-muted-foreground block mt-0.5">
+                        {item.arabic}
+                      </span>
+                      <p className="mt-1.5 text-foreground/70 text-sm leading-relaxed">
+                        {item.desc}
+                      </p>
+                    </div>
+                    <div className="font-display text-xl text-spice tabular-nums">
+                      {item.price}
+                    </div>
+                  </li>
+                ))}
+              </ul>
             </div>
           ))}
         </div>
