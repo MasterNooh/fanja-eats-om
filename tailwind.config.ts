@@ -7,12 +7,15 @@ export default {
   theme: {
     container: {
       center: true,
-      padding: "2rem",
-      screens: {
-        "2xl": "1400px",
-      },
+      padding: "1.5rem",
+      screens: { "2xl": "1320px" },
     },
     extend: {
+      fontFamily: {
+        display: ['"Cormorant Garamond"', "serif"],
+        sans: ["Inter", "system-ui", "sans-serif"],
+        arabic: ["Amiri", "serif"],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -47,6 +50,15 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        ink: "hsl(var(--ink))",
+        sand: "hsl(var(--sand))",
+        "sand-deep": "hsl(var(--sand-deep))",
+        brass: {
+          DEFAULT: "hsl(var(--brass))",
+          bright: "hsl(var(--brass-bright))",
+        },
+        burgundy: "hsl(var(--burgundy))",
+        spice: "hsl(var(--spice))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
@@ -58,6 +70,15 @@ export default {
           ring: "hsl(var(--sidebar-ring))",
         },
       },
+      backgroundImage: {
+        "gradient-hero": "var(--gradient-hero)",
+        "gradient-brass": "var(--gradient-brass)",
+        "gradient-warm": "var(--gradient-warm)",
+      },
+      boxShadow: {
+        warm: "var(--shadow-warm)",
+        soft: "var(--shadow-soft)",
+      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
@@ -65,25 +86,27 @@ export default {
       },
       keyframes: {
         "accordion-down": {
-          from: {
-            height: "0",
-          },
-          to: {
-            height: "var(--radix-accordion-content-height)",
-          },
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
         },
         "accordion-up": {
-          from: {
-            height: "var(--radix-accordion-content-height)",
-          },
-          to: {
-            height: "0",
-          },
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
+        },
+        "fade-up": {
+          from: { opacity: "0", transform: "translateY(20px)" },
+          to: { opacity: "1", transform: "translateY(0)" },
+        },
+        "slow-zoom": {
+          from: { transform: "scale(1)" },
+          to: { transform: "scale(1.08)" },
         },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "fade-up": "fade-up 0.8s cubic-bezier(0.4,0,0.2,1) both",
+        "slow-zoom": "slow-zoom 18s ease-out forwards",
       },
     },
   },
