@@ -1,7 +1,6 @@
 import shuwa from "@/assets/dish-shuwa.jpg";
 import grill from "@/assets/dish-grill.jpg";
 import majboos from "@/assets/dish-majboos.jpg";
-import halwa from "@/assets/dish-halwa.jpg";
 import Ornament from "./Ornament";
 
 type Item = {
@@ -94,31 +93,6 @@ const sections: Section[] = [
         arabic: "برياني نباتي",
         desc: "Saffron rice layered with seasonal vegetables, raisins and fried onions.",
         price: "2.000",
-      },
-    ],
-  },
-  {
-    title: "Sweets & Coffee",
-    arabic: "الحلويات والقهوة",
-    image: halwa,
-    items: [
-      {
-        name: "Omani Halwa",
-        arabic: "حلوى عمانية",
-        desc: "Rosewater, saffron and cardamom halwa topped with toasted pistachios.",
-        price: "1.000",
-      },
-      {
-        name: "Arabic Coffee & Dates",
-        arabic: "قهوة عربية وتمر",
-        desc: "Cardamom-spiced kahwa served with fresh Khalas dates from our own farm.",
-        price: "0.800",
-      },
-      {
-        name: "Luqaimat",
-        arabic: "لقيمات",
-        desc: "Crispy sweet dumplings drizzled with date syrup and sesame seeds.",
-        price: "1.200",
       },
     ],
   },
