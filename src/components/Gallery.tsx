@@ -1,7 +1,6 @@
 import shuwa from "@/assets/dish-shuwa.jpg";
 import grill from "@/assets/dish-grill.jpg";
 import majboos from "@/assets/dish-majboos.jpg";
-import halwa from "@/assets/dish-halwa.jpg";
 import hero from "@/assets/hero-interior.jpg";
 import about from "@/assets/about-exterior.jpg";
 import Ornament from "./Ornament";
@@ -9,9 +8,8 @@ import Ornament from "./Ornament";
 const photos = [
   { src: shuwa, alt: "Shuwa lamb on saffron rice", span: "md:col-span-2 md:row-span-2" },
   { src: hero, alt: "Majlis interior" },
-  { src: halwa, alt: "Omani halwa with coffee" },
+  { src: majboos, alt: "Chicken majboos platter" },
   { src: about, alt: "Restaurant exterior at sunset", span: "md:col-span-2" },
-  { src: majboos, alt: "Camel meat majboos" },
   { src: grill, alt: "Mixed grill platter" },
 ];
 
