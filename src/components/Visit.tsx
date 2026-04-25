@@ -1,4 +1,4 @@
-import { MapPin, Phone, Clock, Navigation } from "lucide-react";
+import { MapPin, Clock, Navigation } from "lucide-react";
 import Ornament from "./Ornament";
 
 const hours = [
@@ -51,32 +51,17 @@ const Visit = () => {
                 </div>
               </div>
 
-              <div className="flex gap-4">
-                <Phone className="text-brass-bright shrink-0 mt-1" size={22} />
-                <div>
-                  <div className="text-xs uppercase tracking-[0.2em] text-sand/60">Reservations</div>
-                  <a href="tel:+96891234567" className="mt-1 font-display text-xl hover:text-brass-bright transition-colors block">
-                    +968 9123 4567
-                  </a>
-                </div>
-              </div>
             </div>
 
             <div className="mt-12 flex flex-wrap gap-4">
               <a
-                href="https://maps.google.com/?q=Arab+World+Restaurant+Fanja+Oman"
+                href="https://www.google.com/maps/place/25+360097"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-7 py-4 bg-brass text-ink uppercase tracking-[0.2em] text-xs font-medium hover:bg-brass-bright transition-colors"
               >
                 <Navigation size={16} />
                 Get Directions
-              </a>
-              <a
-                href="tel:+96891234567"
-                className="inline-flex items-center gap-2 px-7 py-4 border border-sand/60 text-sand uppercase tracking-[0.2em] text-xs hover:bg-sand hover:text-ink transition-colors"
-              >
-                Call to Reserve
               </a>
             </div>
           </div>
