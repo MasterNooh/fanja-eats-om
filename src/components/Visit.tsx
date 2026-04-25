@@ -1,4 +1,4 @@
-import { MapPin, Clock, Navigation } from "lucide-react";
+import { MapPin, Phone, Clock, Navigation } from "lucide-react";
 import Ornament from "./Ornament";
 
 const hours = [
@@ -51,6 +51,18 @@ const Visit = () => {
                 </div>
               </div>
 
+              <div className="flex gap-4">
+                <Phone className="text-brass-bright shrink-0 mt-1" size={22} />
+                <div>
+                  <div className="text-xs uppercase tracking-[0.2em] text-sand/60">Reservations</div>
+                  <a href="tel:+96899312499" className="mt-1 font-display text-xl hover:text-brass-bright transition-colors block">
+                    +968 9931 2499
+                  </a>
+                  <a href="tel:+96825360097" className="text-sand/80 hover:text-brass-bright transition-colors block">
+                    +968 2536 0097
+                  </a>
+                </div>
+              </div>
             </div>
 
             <div className="mt-12 flex flex-wrap gap-4">
@@ -62,6 +74,12 @@ const Visit = () => {
               >
                 <Navigation size={16} />
                 Get Directions
+              </a>
+              <a
+                href="tel:+96899312499"
+                className="inline-flex items-center gap-2 px-7 py-4 border border-sand/60 text-sand uppercase tracking-[0.2em] text-xs hover:bg-sand hover:text-ink transition-colors"
+              >
+                Call to Reserve
               </a>
             </div>
           </div>
