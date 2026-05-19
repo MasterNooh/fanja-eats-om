@@ -19,14 +19,21 @@ const Hero = () => {
           </div>
 
           <h1 className="font-display text-sand text-5xl sm:text-6xl md:text-7xl lg:text-8xl leading-[0.95] text-balance animate-fade-up [animation-delay:120ms]">
-            Authentic Omani
+            Authentic Yemeni
             <span className="block italic text-brass-bright">cuisine, slow-cooked.</span>
           </h1>
 
+          <p className="mt-6 font-arabic text-2xl md:text-3xl text-brass-bright animate-fade-up [animation-delay:180ms]" dir="rtl">
+            مطبخ يمني أصيل، يُطهى ببطء
+          </p>
+
           <p className="mt-8 max-w-xl text-sand/85 text-lg leading-relaxed animate-fade-up [animation-delay:240ms]">
-            Home of the legendary Shuwa — fresh meat, fresh chicken, fish and camel,
-            prepared the way our grandfathers taught us. Tucked between the date palms
-            and Hajar mountains of Fanja.
+            Home of the legendary Shuwa, Mandi and Biryani — fresh meat, chicken
+            and fish prepared the Yemeni way. Tucked between the date palms and
+            Hajar mountains of Fanja.
+          </p>
+          <p className="mt-3 max-w-xl font-arabic text-sand/85 text-base leading-relaxed animate-fade-up [animation-delay:280ms]" dir="rtl">
+            بيت الشواء والمندي والبرياني — لحم ودجاج وسمك طازج يُحضّر على الطريقة اليمنية الأصيلة في قرية فنجاء.
           </p>
 
           <div className="mt-10 flex flex-wrap items-center gap-4 animate-fade-up [animation-delay:360ms]">
@@ -34,13 +41,13 @@ const Hero = () => {
               href="#menu"
               className="inline-flex items-center px-8 py-4 bg-brass text-ink uppercase tracking-[0.2em] text-xs font-medium hover:bg-brass-bright transition-colors"
             >
-              View Menu
+              View Menu · القائمة
             </a>
             <a
               href="#visit"
               className="inline-flex items-center px-8 py-4 border border-sand/70 text-sand uppercase tracking-[0.2em] text-xs hover:bg-sand hover:text-ink transition-colors"
             >
-              Find Us
+              Find Us · زورونا
             </a>
           </div>
 

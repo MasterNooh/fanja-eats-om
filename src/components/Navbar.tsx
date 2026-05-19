@@ -2,10 +2,10 @@ import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 
 const links = [
-  { href: "#menu", label: "Menu" },
-  { href: "#about", label: "About" },
-  { href: "#reviews", label: "Reviews" },
-  { href: "#visit", label: "Visit" },
+  { href: "#menu", label: "Menu", arabic: "القائمة" },
+  { href: "#about", label: "About", arabic: "عنّا" },
+  { href: "#reviews", label: "Reviews", arabic: "آراء" },
+  { href: "#visit", label: "Visit", arabic: "زورونا" },
 ];
 
 const Navbar = () => {
@@ -63,14 +63,14 @@ const Navbar = () => {
         </ul>
 
         <a
-          href="#visit"
+          href="tel:+96899312499"
           className={`hidden md:inline-flex items-center px-5 py-2.5 text-xs uppercase tracking-[0.2em] border transition-all ${
             scrolled
               ? "border-ink/80 text-ink hover:bg-ink hover:text-sand"
               : "border-sand/80 text-sand hover:bg-sand hover:text-ink"
           }`}
         >
-          Reserve
+          Call Us
         </a>
 
         <button
@@ -90,19 +90,20 @@ const Navbar = () => {
                 <a
                   href={l.href}
                   onClick={() => setOpen(false)}
-                  className="block py-3 text-ink/80 uppercase text-sm tracking-wide"
+                  className="flex items-center justify-between py-3 text-ink/80 uppercase text-sm tracking-wide"
                 >
-                  {l.label}
+                  <span>{l.label}</span>
+                  <span className="font-arabic text-spice text-base normal-case">{l.arabic}</span>
                 </a>
               </li>
             ))}
             <li>
               <a
-                href="#visit"
+                href="tel:+96899312499"
                 onClick={() => setOpen(false)}
                 className="mt-2 inline-flex w-full justify-center items-center px-5 py-3 border border-ink text-ink uppercase tracking-[0.2em] text-xs"
               >
-                Reserve
+                Call Us · اتصل بنا
               </a>
             </li>
           </ul>

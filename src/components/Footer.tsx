@@ -12,7 +12,8 @@ const Footer = () => {
                 مطعم العالم العربي
               </span>
             </div>
-            <p className="mt-2 text-sm">Authentic Omani cuisine · Fanja, Oman</p>
+            <p className="mt-2 text-sm">Authentic Yemeni cuisine · Fanja, Oman</p>
+            <p className="mt-1 font-arabic text-sm text-brass-bright/90" dir="rtl">مطبخ يمني أصيل · فنجاء، عُمان</p>
           </div>
 
           <div className="flex items-center gap-5">

@@ -28,11 +28,14 @@ const Reviews = () => {
       <div className="container">
         <div className="text-center max-w-2xl mx-auto">
           <span className="text-spice uppercase text-xs tracking-[0.3em]">
-            What Guests Say
+            What Guests Say · آراء الضيوف
           </span>
           <h2 className="mt-3 font-display text-4xl md:text-5xl lg:text-6xl text-ink text-balance">
             <span className="text-spice italic">4.1</span> stars · 1,300+ reviews
           </h2>
+          <p className="mt-3 font-arabic text-xl text-spice" dir="rtl">
+            تقييم 4.1 نجمة · أكثر من 1,300 رأي
+          </p>
           <Ornament className="mt-8" />
         </div>
 
