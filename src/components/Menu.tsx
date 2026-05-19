@@ -138,6 +138,9 @@ const Menu = () => {
           <p className="mt-6 text-foreground/70 text-lg">
             All prices in Omani Rial · جميع الأسعار بالريال العماني
           </p>
+          <p className="mt-2 text-foreground/60 text-sm">
+            Subject to availability · حسب التوفر
+          </p>
         </div>
 
         <div className="mt-20 grid md:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-12">
